@@ -16,11 +16,10 @@ class CreateRepliesTable extends Migration
         Schema::create('replies', function (Blueprint $table) {
             $table->id();
             $table->text('body');
-
-            $table->integer('question_id')->unsigned();
+            $table->unsignedBigInteger('question_id');
             $table->string('user_id');
 
-            $table->foreign('queston_id')->references('id')->on('questions')->cascadeOnDelete();
+            $table->foreign('question_id')->references('id')->on('questions')->OnDelete('cascade');
             $table->timestamps();
         });
     }
