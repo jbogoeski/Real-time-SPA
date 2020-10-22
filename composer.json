@@ -12,8 +12,13 @@
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "huddledigital/zendesk-laravel": "^3.5",
+        "illuminate/support": "^8.11",
         "laravel/framework": "^8.0",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "laravel/ui": "^3.0",
+        "spatie/laravel-translatable": "^4.5",
+        "tymon/jwt-auth": "^1.0.1"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
