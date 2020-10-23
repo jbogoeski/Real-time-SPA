@@ -12,6 +12,11 @@ import Vuetify from 'vuetify'
 
 Vue.use(Vuetify)
 
+import User from './Helpers/User'
+window.User = User
+
+window.EventBus = new Vue();
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -24,7 +29,10 @@ Vue.use(Vuetify)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('AppHome', require('./components/AppHome.vue').default);
+
 import router from './Router/router.js'
+
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -34,6 +42,7 @@ import router from './Router/router.js'
 
 const app = new Vue({
     el: '#app',
+    vuetify: new Vuetify(),
     router,
-    vuetify: new Vuetify()
 });
+
