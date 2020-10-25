@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class NotificationController extends Controller
 {
+    
     public function index() {
         return [
             'read' => NotificationResource::collection(auth()->user()->readNotifications),

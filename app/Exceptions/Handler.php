@@ -44,8 +44,6 @@ class Handler extends ExceptionHandler
         $this->reportable(function (JWTException $e) {
             return response()->json(['error' => 'There is problem with your token'], 400);
         });
-
-
-        
     }
+    
 }
