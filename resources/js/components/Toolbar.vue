@@ -1,8 +1,11 @@
 <template>
 <v-toolbar
-  dense
+color="indigo"
+ 
   >
-    <v-toolbar-title>SingleApp</v-toolbar-title>
+    <v-toolbar-title >
+      <router-link class="white--text" to="/">Single Page App</router-link>
+    </v-toolbar-title>
     <v-spacer></v-spacer>
     <app-notification v-if="loggedIn"></app-notification>
     <div class="hidden-sm-and-down">
