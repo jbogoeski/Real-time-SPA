@@ -7,6 +7,9 @@ use App\Http\Controllers\LikeController;
 use App\Http\Controllers\ReplyController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\NotificationController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,4 +47,7 @@ Route::apiResource('/category', CategoryController::class);
 Route::apiResource('/question/{question}/reply', ReplyController::class);
 Route::post('/like/{reply}', [LikeController::class, 'likeIt']);
 Route::delete('/like/{reply}', [LikeController::class, 'unLikeIt']);
+Route::post('/notifications', [NotificationController::class, 'index']);
+Route::post('/markAsRead', [NotificationController::class, 'markAsRead']);
+
 

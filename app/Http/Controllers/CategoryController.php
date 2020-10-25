@@ -64,7 +64,7 @@ class CategoryController extends Controller
                 'slug'=>Str::slug($request->name),
             ]
         );
-        return response('Updated', Response::HTTP_ACCEPTED);
+        return response(new CategoryResource($category), Response::HTTP_ACCEPTED);
     }
 
     /**
